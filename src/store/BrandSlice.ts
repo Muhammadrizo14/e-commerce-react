@@ -33,7 +33,7 @@ const initialState: BrandState = {
   },
 };
 
-const BASE_URL = 'https://e-commerce-65446-default-rtdb.firebaseio.com';
+const BASE_URL = 'https://ecomerce-986f2-default-rtdb.firebaseio.com';
 
 export const fetchBrands = createAsyncThunk('brand/fetchbrands', async (_, { dispatch, rejectWithValue }) => {
   const response = await fetch(`${BASE_URL}/brands.json`);

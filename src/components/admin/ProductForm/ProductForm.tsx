@@ -157,16 +157,7 @@ const ProductForm: React.FC<IProductFormProps> = ({ onClose, categories, brands 
                 field={'brand'}
               />
 
-              <ProductFormSelect
-                options={GENDER}
-                errorText={errors.gender}
-                defaultOptionText={'Выберите пол'}
-                label={'Пол'}
-                required
-                onSelect={handleChangeSelect}
-                value={input.gender.name || ''}
-                field={'gender'}
-              />
+
             </div>
 
             <Input

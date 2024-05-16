@@ -28,8 +28,8 @@ const ProductPage: React.FC<IProductPageProps> = () => {
   }
 
   const { id, name, description, image, brand, price, weight, discount, gender } = product;
-  const chipText =
-    gender.url === 'male' ? 'Мужская коллекция' : gender.url === 'female' ? 'Женская коллекция' : 'Унисекс';
+  // const chipText =
+  //   gender.url === 'male' ? 'Мужская коллекция' : gender.url === 'female' ? 'Женская коллекция' : 'Унисекс';
   const isWished = wishlist.includes(id);
 
   const cartItem: CartItem = {
@@ -58,7 +58,7 @@ const ProductPage: React.FC<IProductPageProps> = () => {
                   <h1 className={classes.title}>{name}</h1>
                   <div className={classes['chip-wrapper']}>
                     <Chip text={brand.name} mode={'plain'} />
-                    <Chip text={chipText} mode={'plain'} />
+                    {/*<Chip text={chipText} mode={'plain'} />*/}
                   </div>
                 </div>
 

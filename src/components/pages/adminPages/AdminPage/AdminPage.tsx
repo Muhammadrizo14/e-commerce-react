@@ -1,5 +1,5 @@
 import classes from './AdminPage.module.css';
-import { Outlet } from 'react-router-dom';
+import {Outlet, useNavigate} from 'react-router-dom';
 import Header from '../../../layouts/adminLayouts/Header/Header';
 import Sidebar from '../../../layouts/adminLayouts/Sidebar/Sidebar';
 import Main from '../../../layouts/adminLayouts/Main/Main';
@@ -10,11 +10,20 @@ import { fetchOrders } from '../../../../store/CommonSlice';
 import Toast from '../../../UI/Toast/Toast';
 const AdminPage: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
+  const navigate = useNavigate()
   const { alert } = useSelector((state: RootState) => state.common);
 
   useEffect(() => {
+
+
+    if (localStorage.getItem('accessToken') !== 'true') {
+      navigate('/')
+    }
+
     dispatch(fetchOrders());
   }, [dispatch]);
+
+
 
   return (
     <div className={classes.admin}>

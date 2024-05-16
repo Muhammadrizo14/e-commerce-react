@@ -28,12 +28,11 @@ const CheckoutSuccessPage: React.FC = () => {
       <SectionBody>
         <div className={classes['checkout-success']}>
           <span className={classes.title}>Заказ оформлен</span>
-          <span className={classes.subtitle}>Вы будете перенаправлены на главную страницу через {counter} секунд</span>
-          <span className={classes.text}>Заказ можно посмотреть в админке</span>
+          <span className={classes.subtitle}>Скоро с Вами свяжется менеджер. Ваша заявка в обработке и корзина обнуляется</span>
 
-          <Link to={`${PATHS.admin}${PATHS.orders}`} className={classes.link}>
-            Перейти в админку
-          </Link>
+          {/*<Link to={`/`} className={classes.link}>*/}
+          {/*  Перейти в главную*/}
+          {/*</Link>*/}
         </div>
       </SectionBody>
     </Section>

@@ -22,7 +22,7 @@ const DiscountProductsPage: React.FC<IDiscountProductsPageProps> = () => {
   return (
     <Section>
       <>
-        <SectionHeader title={'Скидки'} />
+        <SectionHeader title={'Товары по акции'} />
         <SectionBody>
           <SectionBodyGrid>
             <>

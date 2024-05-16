@@ -19,6 +19,7 @@ import CartPage from './components/pages/showcasePages/CartPage/CartPage';
 import OrdersPage from './components/pages/adminPages/OrdersPage/OrdersPage';
 import CheckoutSuccessPage from './components/pages/showcasePages/CheckoutSuccessPage/CheckoutSuccessPage';
 import NotFound from './components/pages/showcasePages/NotFound/NotFound';
+import LoginPage from "./components/pages/adminPages/LoginPage/LoginPage";
 
 const App = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -75,8 +76,12 @@ const App = () => {
         {
           path: PATHS.settings,
           element: <SettingsPage />,
-        },
+        }
       ],
+    },
+    {
+      path: PATHS.login,
+      element: <LoginPage />,
     },
 
     {

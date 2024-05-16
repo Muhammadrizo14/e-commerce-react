@@ -6,6 +6,18 @@
 
 .navigation {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.exit {
+  border: 0;
+  background: 0;
+  color: #fff;
+  cursor: pointer;
 }
 
 .toggle-btn {

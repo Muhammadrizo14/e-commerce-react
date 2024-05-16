@@ -1,5 +1,6 @@
 export const PATHS = {
   showcase: '/',
+  login: '/login/',
   products: 'products',
   admin: '/admin/',
   settings: 'settings',
