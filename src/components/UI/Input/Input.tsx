@@ -38,6 +38,7 @@ const Input: React.FC<IInputProps> = ({
         value={value}
         onChange={onChange}
         disabled={isDisabled}
+        minLength={3}
       />
       {errorText && <span className={classes.highlighted}>{errorText}</span>}
     </div>

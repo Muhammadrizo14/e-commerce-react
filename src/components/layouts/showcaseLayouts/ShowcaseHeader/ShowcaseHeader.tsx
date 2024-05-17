@@ -20,7 +20,7 @@ const ShowcaseHeader: React.FC<IShowcaseHeaderProps> = () => {
     <header className={classes.header}>
       <div className={classes['admin-link-wrapper']}>
         <Link to={`${localStorage.getItem('accessToken') ? 'admin/orders' : PATHS.login}`} className={classes.link}>
-          Перейти в админку
+          Перейти в панель администратора
         </Link>
 
       {/*  <a*/}

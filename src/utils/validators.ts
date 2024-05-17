@@ -97,9 +97,21 @@ export const cartFormValidator = (field: string, inputValue: string | { [key: st
     return null;
   }
 
+  if (field === 'name') {
+    if (inputValue.replaceAll("[^\\d.]", "").length !== 0){
+      return {
+        [field]: 'Поле не может содержать цифру',
+      };
+    }
+  }
+
   if (inputValue.trim().length === 0) {
     return {
       [field]: 'Поле не может быть пустым',
+    };
+  } else if (inputValue.trim().length < 3) {
+    return {
+      [field]: 'Минимальная число букв 3',
     };
   }
   return null;

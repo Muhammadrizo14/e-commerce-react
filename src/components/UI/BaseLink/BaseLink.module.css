@@ -4,7 +4,8 @@
 }
 
 .button {
-  background-color: #fc0;
+  background-color: #247AB5; /* need to be change*/
+  color: #fff;
   border-radius: 8px;
 }
 

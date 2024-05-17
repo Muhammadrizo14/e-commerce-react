@@ -24,7 +24,7 @@ const Menu: React.FC<IMenuProps> = ({ categories }) => {
   return (
     <div className={classes.menu} ref={ref}>
       <button onClick={openMenu} className={classes.button}>
-        <MenuIcon fill={'black'} />
+        <MenuIcon fill={'white'} />
         Каталог товаров
       </button>
       {isMenuOpen && (

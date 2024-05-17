@@ -11,7 +11,7 @@ const LoginPage = () => {
 
   const login = (e: any)=> {
     e.preventDefault()
-    if (name === 'root' || password === 'admin') {
+    if (name === 'root' && password === 'admin') {
       localStorage.setItem('accessToken', 'true')
       navigate('/admin/orders')
     } else {
