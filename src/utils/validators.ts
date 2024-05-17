@@ -98,7 +98,7 @@ export const cartFormValidator = (field: string, inputValue: string | { [key: st
   }
 
   if (field === 'name') {
-    if (inputValue.replace(/[a-zA-Z]/g, '').length > 0){
+    if (inputValue.replace(/[a-zA-Zа-яА-Я]/g, '').length > 0){
       return {
         [field]: 'Поле не может содержать цифру',
       };
