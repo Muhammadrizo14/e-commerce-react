@@ -27,7 +27,7 @@ const ProductPage: React.FC<IProductPageProps> = () => {
     return <NotFound />;
   }
 
-  const { id, name, description, image, brand, price, weight, discount, gender } = product;
+  const { id, name, description, image, brand, price, weight, discount } = product;
   // const chipText =
   //   gender.url === 'male' ? 'Мужская коллекция' : gender.url === 'female' ? 'Женская коллекция' : 'Унисекс';
   const isWished = wishlist.includes(id);

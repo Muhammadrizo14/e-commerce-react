@@ -1,6 +1,8 @@
-import { Option } from '../../../../types/common';
+import {Option} from '../../../../types/common';
 import Select from '../../../UI/Select/Select';
 import classes from './ProductFormSelect.module.css';
+import {log} from "util";
+import {useEffect} from "react";
 
 interface IProductFormSelectProps {
   options: Option[];
@@ -12,20 +14,22 @@ interface IProductFormSelectProps {
   value: string;
   field: string;
   errorText?: string;
+  hidden?: boolean
 }
 
 const ProductFormSelect: React.FC<IProductFormSelectProps> = ({
-  label,
-  required,
-  errorText,
-  onSelect,
-  options,
-  value,
-  field,
-  defaultOptionText,
-}) => {
+                                                                label,
+                                                                required,
+                                                                errorText,
+                                                                onSelect,
+                                                                options,
+                                                                value,
+                                                                field,
+                                                                defaultOptionText,
+                                                                hidden
+                                                              }) => {
   return (
-    <div className={classes['product-form-select']}>
+    <div className={classes['product-form-select'] + ` ${hidden ?classes['dsnone']:''}`}>
       <span className={classes.label}>
         {label} {required && <span className={classes.highlighted}>*</span>}
       </span>
@@ -35,7 +39,6 @@ const ProductFormSelect: React.FC<IProductFormSelectProps> = ({
         defaultOptionText={defaultOptionText}
         isDisabled={false}
         options={options}
-        required
         onSelect={onSelect}
         value={value || ''}
         errorText={errorText}

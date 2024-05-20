@@ -245,7 +245,7 @@ const ProductsList: React.FC<IProductsListProps> = ({ products, onOpen, isLoadin
                 </td>
               </tr>
             )}
-            {productList.map(({ id, image, price, brand, category, name, discount, gender }) => {
+            {productList.map(({ id, image, price, brand, category, name, discount }) => {
               return (
                 <tr key={id}>
                   <td className={classes.cell}>
@@ -256,7 +256,6 @@ const ProductsList: React.FC<IProductsListProps> = ({ products, onOpen, isLoadin
 
                     <div className={classes['chip-wrapper']}>
                       {discount && <Chip text={'Скидка  -' + discount.percent + '%'} mode={'highlighted'} />}
-                      {gender && <Chip text={'Пол: ' + gender.name.toLocaleLowerCase()} mode={'info'} />}
                     </div>
                   </td>
                   <td className={classes.cell}>{category.name}</td>

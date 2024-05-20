@@ -34,7 +34,7 @@ const initialState: CategoryState = {
   },
 };
 
-const BASE_URL = 'https://ecomerce-986f2-default-rtdb.firebaseio.com';
+const BASE_URL = 'https://vladislav-118bd-default-rtdb.firebaseio.com';
 
 export const fetchCategories = createAsyncThunk(
   'category/fetchCategories',
@@ -49,10 +49,10 @@ export const fetchCategories = createAsyncThunk(
     const data = await response.json();
     const categories: Category[] = handleObj(data);
 
-    if (categories.length < 2) {
-      const mockedCategories: Category[] = handleObj(MOCKED_CATEGORIES);
-      return mockedCategories;
-    }
+    // if (categories.length < 2) {
+    //   const mockedCategories: Category[] = handleObj(MOCKED_CATEGORIES);
+    //   return mockedCategories;
+    // }
     return categories;
   }
 );

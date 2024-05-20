@@ -33,7 +33,7 @@ const initialState: BrandState = {
   },
 };
 
-const BASE_URL = 'https://ecomerce-986f2-default-rtdb.firebaseio.com';
+const BASE_URL = 'https://vladislav-118bd-default-rtdb.firebaseio.com';
 
 export const fetchBrands = createAsyncThunk('brand/fetchbrands', async (_, { dispatch, rejectWithValue }) => {
   const response = await fetch(`${BASE_URL}/brands.json`);
@@ -46,10 +46,10 @@ export const fetchBrands = createAsyncThunk('brand/fetchbrands', async (_, { dis
   const data = await response.json();
   const brands: Brand[] = handleObj(data);
 
-  if (brands.length < 2) {
-    const mockedBrands: Brand[] = handleObj(MOCK_BRANDS);
-    return mockedBrands;
-  }
+  // if (brands.length < 2) {
+  //   const mockedBrands: Brand[] = handleObj(MOCK_BRANDS);
+  //   return mockedBrands;
+  // }
   return brands;
 });
 

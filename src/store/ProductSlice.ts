@@ -39,11 +39,6 @@ const initialState: ProductState = {
       id: '',
       name: '',
     },
-    gender: {
-      name: '',
-      id: '',
-      url: '',
-    },
   },
   isLoading: false,
   error: {
@@ -53,7 +48,7 @@ const initialState: ProductState = {
 };
 
 
-const BASE_URL = 'https://ecomerce-986f2-default-rtdb.firebaseio.com';
+const BASE_URL = 'https://vladislav-118bd-default-rtdb.firebaseio.com';
 
 export const fetchProducts = createAsyncThunk<Product[], void, { state: RootState }>(
   'product/fetchProducts',
@@ -70,9 +65,9 @@ export const fetchProducts = createAsyncThunk<Product[], void, { state: RootStat
     let products: Product[] = [];
     const data = await response.json();
     products = handleObj(data);
-    if (!products || products?.length === 0) {
-      products = handleObj(MOCKED_PRODUCTS);
-    }
+    // if (!products || products?.length === 0) {
+    //   products = handleObj(MOCKED_PRODUCTS);
+    // }
 
     const {
       brand: { brands },
@@ -129,7 +124,7 @@ export const createProduct = createAsyncThunk(
 export const updateProduct = createAsyncThunk(
   'product/updateProduct',
   async (product: Product, { dispatch, rejectWithValue }) => {
-    const { id, category, description, discount, image, name, brand, price, weight, gender } = product;
+    const { id, category, description, discount, image, name, brand, price, weight } = product;
     const response = await fetch(`${BASE_URL}/products/${id}.json`, {
       method: 'PATCH',
       headers: {
@@ -144,7 +139,6 @@ export const updateProduct = createAsyncThunk(
         brand,
         price,
         weight,
-        gender,
       }),
     });
 
