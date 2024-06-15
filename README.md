@@ -7,7 +7,7 @@
 
 ## Деплой
 
-https://flourishing-tartufo-ae4f52.netlify.app/
+[https://flourishing-tartufo-ae4f52.netlify.app/](https://e-commerce-react-eight-delta.vercel.app)
 
 ## Функционал
 
